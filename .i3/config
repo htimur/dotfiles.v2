@@ -30,10 +30,10 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec rofi -show drun -columns 3
 
 # Move between windows
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # Alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -42,10 +42,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # Move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # Alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -54,13 +54,13 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # Split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+Shift+v split h
 
 # Split in vertical orientation
 bindsym $mod+v split v
 
 # Enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $mod+Shift+Return  fullscreen toggle
 
 # Change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -202,10 +202,10 @@ bar
 exec_always --no-startup-id feh --bg-scale ~/.wallpapers/forest-nightscape.jpg # Wallpaper
 exec_always --no-startup-id ~/.monitor.sh # Automatically switch within monitors
 exec --no-startup-id g213-led -fx hwave keys 0a # Set the keyboard colours
-exec --no-startup-id setxkbmap latam # Set the keyboard layout
+exec --no-startup-id setxkbmap us,ru # Set the keyboard layout
 exec --no-startup-id xbindkeys # Load keyboard shortcuts
 exec --no-startup-id compton --config ~/.config/compton/compton.conf # Compositor for window transparency
 exec --no-startup-id emacs --daemon=instance1 # Daemonize Emacs
 exec --no-startup-id xfce4-power-manager # To monitor batttery
 exec --no-startup-id dunst # Start notification daemon
-exec --no-startup-id notify-send "Welcome back Andrea!" -i ~/.images/happy.png # Greeting on startup
+exec --no-startup-id notify-send "Welcome back Timur!" -i ~/.images/happy.png # Greeting on startup
