@@ -4,7 +4,7 @@
 
 sudo pacman -Syu
 
-sudo pacman -Sy vim zsh git acpi neofetch i3-gaps i3blocks rofi compton playerctl feh xfce4-power-manager xfce4-notifyd lightdm bat alacritty emacs
+sudo pacman -Sy vim zsh git acpi neofetch i3-gaps i3blocks rofi compton playerctl feh xfce4-power-manager xfce4-notifyd lightdm bat alacritty emacs nitrogen
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"t 
 
