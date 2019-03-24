@@ -34,6 +34,9 @@ alias rm="rm -i"
 alias x="ranger"
 alias c="cmus"
 alias h="htop"
+alias untar="tar -zxvf"
+alias reload="source ~/.zshrc"
+
 
 # Show OS info when opening a new terminal
 neofetch
@@ -117,10 +120,12 @@ ENABLE_CORRECTION="true"
 HIST_STAMPS="mm/dd/yyyy"
 
 # Plugins to load
-plugins=(git
-        virtualenv)
+plugins=(git docker gradle sbt ssh-agent go rust terraform history-substring-search virtualenv)
+
 source $ZSH/oh-my-zsh.sh
 
 # Prompt elements
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_user dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(background_jobs battery)
+
+export LANG=en_US.UTF-8
