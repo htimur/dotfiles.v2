@@ -6,7 +6,7 @@ sudo pacman -Syu
 
 sudo pacman -Sy vim zsh git acpi neofetch i3-gaps i3blocks rofi compton playerctl feh xfce4-power-manager xfce4-notifyd lightdm bat alacritty emacs nitrogen
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"t 
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 
