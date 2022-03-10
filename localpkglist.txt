@@ -1,0 +1,13 @@
+amazon-ecr-credential-helper
+authy
+betterlockscreen
+chroma-bin
+insync
+insync-thunar
+jetbrains-toolbox
+nerd-fonts-source-code-pro
+protonvpn
+slack-desktop
+spotify
+ttf-ms-fonts
+xkb-switch
