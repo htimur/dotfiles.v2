@@ -15,19 +15,10 @@
     bg:               #282a36;
     blackselect:      #44475a;
     cyan:             #8be9fd;
-    font: "SauceCodePro Nerd Font Black 12";
+    font: "SpaceMono Nerd Font Black 12";
     background-color: @bg;
     show-icons: true;
     icon-theme: "Pop";
-}
-
-window {
-    background-color: @bg;
-    border:           0;
-    padding:          0;
-    anchor:           north;
-    location:         north;
-    y-offset:         0%;
 }
 
 mainbox {
@@ -107,9 +98,7 @@ element alternate.active {
 }
 
 scrollbar {
-    background-color: @bg;
-    handle-color: @cyan;
-    handle-width: 15px;
+    handle-width: 0px;
 }
 
 mode-switcher {
@@ -131,19 +120,19 @@ inputbar {
 }
 
 prompt {
-    padding:6px 9px;
+    padding: 6px 9px;
     background-color: @maincolor;
     text-color:@bg;
 }
 
 entry {
-    padding:6px 10px;
+    padding: 6px 10px;
     background-color:@bg;
     text-color:@fg;
 }
 
 case-indicator {
-    padding:6px 10px;
+    padding: 6px 10px;
     text-color:@maincolor;
     background-color:@bg;
 }

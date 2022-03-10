@@ -1,131 +1,165 @@
-#  _____    _
-# |__  /___| |__  _ __ ___
-#   / // __| '_ \| '__/ __|
-#  / /_\__ \ | | | | | (__
-# /____|___/_| |_|_|  \___|
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
-# Syntax highlighting and tab completion
-autoload -Uz compinit
-source ~/.zprofile
+# If you come from bash you might have to change your $PATH.
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Coloured man pages using less as pager
-man() {
-    env \
-	      LESS_TERMCAP_mb=$(printf "\e[1;31m") \
-	      LESS_TERMCAP_md=$(printf "\e[1;31m") \
-	      LESS_TERMCAP_me=$(printf "\e[0m") \
-	      LESS_TERMCAP_se=$(printf "\e[0m") \
-	      LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
-	      LESS_TERMCAP_ue=$(printf "\e[0m") \
-	      LESS_TERMCAP_us=$(printf "\e[1;36m") \
-	      man "$@"
-}
+# Path to your oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+# zsh-autosuggestions
+if [[ -f "$ZSH/custom/plugins/zsh-autosuggestions/install_test_zsh.sh" ]]; then
+	# will first try to find a suggestion from your history, but,
+	# if it can't find a match, will find a suggestion from the completion engine.
+	export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+  export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#007474"
+	# Search Previous Used Commands using arrows
+	# up and down arrows - history search
+	autoload -U history-search-end
+	zle -N history-beginning-search-backward-end history-search-end
+	zle -N history-beginning-search-forward-end history-search-end
+fi
 
-# Aliases for a few useful commands
-alias mirrorUpdate="sudo reflector --latest 250 --protocol https --sort rate --save /etc/pacman.d/mirrorlist"
-alias yaourt="yaourt --pager --color"
-alias pacmanGhost="~/.pacman.sh"
-alias shivita="toilet -f mono12 -F rainbow 'andrea' | ponythink -f winona"
-alias emacs="emacs -nw"
-alias cat="bat"
-alias ls="lsd"
-alias ip="ip -c"
-alias rm="rm -i"
-alias x="ranger"
-alias c="cmus"
-alias h="htop"
-alias untar="tar -zxvf"
-alias reload="source ~/.zshrc"
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+#ZSH_THEME="robbyrussell"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in $ZSH/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
-# Show OS info when opening a new terminal
-neofetch
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
 
-# Font mode for powerlevel9k
-POWERLEVEL9K_MODE="nerdfont-complete"
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
 
-# Set name of the theme to load.
-ZSH_THEME="powerlevel9k/powerlevel9k"
+# Uncomment one of the following lines to change the auto-update behavior
+# zstyle ':omz:update' mode disabled  # disable automatic updates
+# zstyle ':omz:update' mode auto      # update automatically without asking
+# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
-# Prompt settings
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
-POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%K{white}%k"
-POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%K{green}%F{black} \uf155 %f%F{green}%k\ue0b0%f "
+# Uncomment the following line to change how often to auto-update (in days).
+# zstyle ':omz:update' frequency 13
 
-# Separators
-POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR=$'\ue0b0'
-POWERLEVEL9K_LEFT_SUBSEGMENT_SEPARATOR=$'\ue0b1'
-POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR=$'\ue0b2'
-POWERLEVEL9K_RIGHT_SUBSEGMENT_SEPARATOR=$'\ue0b7'
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS="true"
 
-# Dir colours
-POWERLEVEL9K_DIR_HOME_BACKGROUND='black'
-POWERLEVEL9K_DIR_HOME_FOREGROUND='white'
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='black'
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='white'
-POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='yellow'
-POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='black'
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
-POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
 
-# OS segment
-POWERLEVEL9K_OS_ICON_BACKGROUND='black'
-POWERLEVEL9K_LINUX_ICON='%F{cyan} \uf303 %F{white} arch %F{cyan}linux%f'
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
 
-# VCS icons
-POWERLEVEL9K_VCS_GIT_ICON=$'\uf1d2 '
-POWERLEVEL9K_VCS_GIT_GITHUB_ICON=$'\uf113 '
-POWERLEVEL9K_VCS_GIT_GITLAB_ICON=$'\uf296 '
-POWERLEVEL9K_VCS_BRANCH_ICON=$''
-POWERLEVEL9K_VCS_STAGED_ICON=$'\uf055'
-POWERLEVEL9K_VCS_UNSTAGED_ICON=$'\uf421'
-POWERLEVEL9K_VCS_UNTRACKED_ICON=$'\uf00d'
-POWERLEVEL9K_VCS_INCOMING_CHANGES_ICON=$'\uf0ab '
-POWERLEVEL9K_VCS_OUTGOING_CHANGES_ICON=$'\uf0aa '
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
 
-# VCS colours
-POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='blue'
-POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='black'
-POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='green'
-POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='black'
-POWERLEVEL9K_VCS_CLEAN_BACKGROUND='green'
-POWERLEVEL9K_VCS_CLEAN_FOREGROUND='black'
+# Uncomment the following line to display red dots whilst waiting for completion.
+# You can also set it to another string to have that shown instead of the default red dots.
+# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
+# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
+# COMPLETION_WAITING_DOTS="true"
 
-# VCS CONFIG
-POWERLEVEL9K_SHOW_CHANGESET=false
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Status
-POWERLEVEL9K_OK_ICON=$'\uf164'
-POWERLEVEL9K_FAIL_ICON=$'\uf165'
-POWERLEVEL9K_CARRIAGE_RETURN_ICON=$'\uf165'
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
+# HIST_STAMPS="mm/dd/yyyy"
 
-# Battery
-POWERLEVEL9K_BATTERY_LOW_FOREGROUND='red'
-POWERLEVEL9K_BATTERY_CHARGING_FOREGROUND='blue'
-POWERLEVEL9K_BATTERY_CHARGED_FOREGROUND='green'
-POWERLEVEL9K_BATTERY_DISCONNECTED_FOREGROUND='blue'
-POWERLEVEL9K_BATTERY_VERBOSE=true
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
 
-# User with skull
-user_with_skull() {
-    echo -n "$(whoami)"
-}
-POWERLEVEL9K_CUSTOM_USER="user_with_skull"
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(
+    colorize
+    copyfile
+    docker
+    docker-compose
+    git
+    gitfast
+    golang
+    zsh-syntax-highlighting
+    zsh-history-substring-search
+    kubectl
+    rust
+    safe-paste
+    virtualenv
+    aws
+    nvm
+    terraform
+    zsh-autosuggestions
+)
+# Source Oh My ZSH for plugins and zsh-autosuggestions, zsh-syntax-highlighting,
+# zsh-history-substring-search and the powerlevel10k theme.
+#while IFS= read -r script
+#do
+#    source "$script"
+#done < <(find ~/.oh-my-zsh/custom/plugins -maxdepth 2 -type f -name "*.zsh" ! -name '*plugin.zsh')
 
-# Command auto-correction.
-ENABLE_CORRECTION="true"
-
-# Command execution time stamp shown in the history command output.
-HIST_STAMPS="mm/dd/yyyy"
-
-# Plugins to load
-plugins=(git docker gradle sbt ssh-agent go rust terraform history-substring-search virtualenv)
 
 source $ZSH/oh-my-zsh.sh
 
-# Prompt elements
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_user dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(background_jobs battery)
+# User configuration
 
-export LANG=en_US.UTF-8
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
+
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+alias ls='lsd'
+alias l='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
+alias ip='ip -c'
+alias rm='rm -i'
+alias xcopy='xclip -i -selection clipboard'
+alias xpaste='xclip -o -selection clipboard'
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+source /usr/share/nvm/init-nvm.sh
+
