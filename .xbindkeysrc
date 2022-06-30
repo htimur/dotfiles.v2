@@ -37,6 +37,10 @@
    m:0x10 + c:172
    Mod2 + XF86AudioPlay
 
+"playerctl play-pause"
+   m:0x0 + c:127
+   Pause
+
 # Stop
 "playerctl stop"
    m:0x10 + c:174
