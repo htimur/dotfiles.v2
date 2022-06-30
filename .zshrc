@@ -158,8 +158,29 @@ alias ip='ip -c'
 alias rm='rm -i'
 alias xcopy='xclip -i -selection clipboard'
 alias xpaste='xclip -o -selection clipboard'
+alias aws_stage='aws-google-auth  -d 42000   -p juniqe-staging --role-arn arn:aws:iam::445858552116:role/juniqe-staging/admin'
+alias aws_prod='aws-google-auth  -d 42000   -p juniqe-production --role-arn arn:aws:iam::054846004576:role/juniqe-production/operator'
+alias swstage='export AWS_PROFILE=juniqe-staging'
+alias swprod='export AWS_PROFILE=juniqe-production'
+
+alias kubestage='kubectl config use-context juniqe-staging && kubectl config set-context --current --namespace=juniqe-staging'
+alias kubeprod='kubectl config use-context juniqe-production && kubectl config set-context --current --namespace=juniqe-production'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 source /usr/share/nvm/init-nvm.sh
 
+
+# add Pulumi to the PATH
+export PATH=$PATH:$HOME/.pulumi/bin
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/timur/build/google-cloud-sdk/path.zsh.inc' ]; then . '/home/timur/build/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/timur/build/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/timur/build/google-cloud-sdk/completion.zsh.inc'; fi
+
+if [ -n "$DESKTOP_SESSION" ];then
+    eval $(gnome-keyring-daemon --start)
+    export SSH_AUTH_SOCK
+fi
