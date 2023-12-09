@@ -1,0 +1,9 @@
+2023-11-18 21:54:09,902 DEBUG    root            Loaded Command Group: ['gcloud', 'projects']
+2023-11-18 21:54:09,903 DEBUG    root            Loaded Command Group: ['gcloud', 'projects', 'describe']
+2023-11-18 21:54:09,904 DEBUG    root            Running [gcloud.projects.describe] with arguments: [--account: "timur.khamrakulov@yassir.com", --configuration: "default", --format: "value(name)", PROJECT_ID_OR_NUMBER: "ysr-ghrunner-prd"]
+2023-11-18 21:54:09,912 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudresourcemanager.googleapis.com:443
+2023-11-18 21:54:10,651 DEBUG    urllib3.connectionpool https://cloudresourcemanager.googleapis.com:443 "GET /v1/projects/ysr-ghrunner-prd?alt=json HTTP/1.1" 200 None
+2023-11-18 21:54:10,652 DEBUG    root            Chosen display Format:default value(name)
+2023-11-18 21:54:10,653 INFO     root            Display format: "default value(name)"
+2023-11-18 21:54:10,653 INFO     ___FILE_ONLY___ ysr-ghrunner-prd
+

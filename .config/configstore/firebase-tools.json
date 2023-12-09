@@ -1,0 +1,45 @@
+{
+	"analytics-uuid": "1ef51adf-e575-4483-91ee-4118fb434bcb",
+	"motd": {
+		"cloudBuildErrorAfter": 1594252800000,
+		"cloudBuildWarnAfter": 1590019200000,
+		"defaultNode10After": 1594252800000,
+		"minVersion": "3.0.5",
+		"node8DeploysDisabledAfter": 1613390400000,
+		"node8RuntimeDisabledAfter": 1615809600000,
+		"node8WarnAfter": 1600128000000,
+		"fetched": 1682516478949
+	},
+	"usage": false,
+	"user": {
+		"iss": "accounts.google.com",
+		"azp": "563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com",
+		"aud": "563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com",
+		"sub": "101180058644964908794",
+		"hd": "yassir.com",
+		"email": "timur.khamrakulov@yassir.com",
+		"email_verified": true,
+		"at_hash": "s-NcOsy2NDjk-8xyVnci8A",
+		"iat": 1681216226,
+		"exp": 1681219826
+	},
+	"tokens": {
+		"expires_at": 1682523401715,
+		"refresh_token": "1//099gUj6H80OifCgYIARAAGAkSNwF-L9IrqNw2q71bpd798iFBZqgSnp4C8-Rk_wsMRd0UBLPQ40h6ccts2_oTAsU7MPy1pqQgvnE",
+		"scopes": [],
+		"access_token": "ya29.a0Ael9sCP-hK8dOCQ5TL0EbpwDbKY-6EDBCEAqPZcExbQV_HN2sFTH1fKz8VDg2OXmA9lcDcbXts3-laLqzNfI7lQu4X3aDzlVXpd9ncNUCbsRG8Zo1AhCD_sxN136FXLyM9PXRMdN4SONiw5xjJga1hItgVXTQeEEEq7cvQaCgYKAVoSARASFQF4udJhdbozwEs84Y3gJgOI9GmAiQ0173",
+		"expires_in": 3599,
+		"scope": "https://www.googleapis.com/auth/cloudplatformprojects.readonly openid https://www.googleapis.com/auth/firebase https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/userinfo.email",
+		"token_type": "Bearer",
+		"id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijg2OTY5YWVjMzdhNzc4MGYxODgwNzg3NzU5M2JiYmY4Y2Y1ZGU1Y2UiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJhY2NvdW50cy5nb29nbGUuY29tIiwiYXpwIjoiNTYzNTg0MzM1ODY5LWZncmhnbWQ0N2JxbmVraWo1aThiNXByMDNobzg0OWU2LmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwiYXVkIjoiNTYzNTg0MzM1ODY5LWZncmhnbWQ0N2JxbmVraWo1aThiNXByMDNobzg0OWU2LmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwic3ViIjoiMTAxMTgwMDU4NjQ0OTY0OTA4Nzk0IiwiaGQiOiJ5YXNzaXIuY29tIiwiZW1haWwiOiJ0aW11ci5raGFtcmFrdWxvdkB5YXNzaXIuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJsZHVtNUNBNFF2X3h2QlhOZ2p5T1h3IiwiaWF0IjoxNjgyNTE5ODAyLCJleHAiOjE2ODI1MjM0MDJ9.nDVNEPQ0BOHNE4mg2CfDauoryW_Gh4wAkggEyxglYYpM9Vr_p5cEn0SVPMcDiFuoHmEiiZkpZs_SGOfu_WguZhh_H0FDyx7jZS-hFCNPzV0QzSalhLvDaX5Q2rkVcM5INQvLZel5sjHFZKppysN2fWbf0cfwe17qz9BJxy3dv-t_B5pLL3dHHUR3CTRAM2YIMiildb-QvBPZgIohLoV8kExuIksV2iC_GisuHtUTestNL8QQLXlQhW_f7lbu8P8RmKL-dMvTiofc6_z6-hw35RPUnRKwR0If7we0B2rx7O4sNwyG1CGdh1nS9nnR-6CRm4ovJbv68l5wzzVe_O70ag"
+	},
+	"activeProjects": {
+		"/home/timur/projects/brand-website-cms-frontend": "ysr-brand-onesite-stg",
+		"/home/timur/projects/brand-website-frontend/infra": "ysr-brand-onesite-stg",
+		"/home/timur/projects/brand-website-frontend": "ysr-brand-onesite-stg"
+	},
+	"previews": {
+		"webframeworks": true
+	},
+	"lastError": 1682519825814
+}

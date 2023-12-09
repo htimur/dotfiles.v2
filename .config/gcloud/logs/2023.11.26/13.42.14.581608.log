@@ -1,0 +1,37 @@
+2023-11-26 13:42:14,582 DEBUG    root            Loaded Command Group: ['gcloud', 'config']
+2023-11-26 13:42:14,583 DEBUG    root            Loaded Command Group: ['gcloud', 'config', 'config_helper']
+2023-11-26 13:42:14,585 DEBUG    root            Running [gcloud.config.config-helper] with arguments: [--format: "json"]
+2023-11-26 13:42:14,617 DEBUG    google.auth.transport.requests Making request: POST https://oauth2.googleapis.com/token
+2023-11-26 13:42:14,620 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2023-11-26 13:42:14,743 DEBUG    urllib3.connectionpool https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2023-11-26 13:42:14,758 DEBUG    root            Chosen display Format:default json
+2023-11-26 13:42:14,758 INFO     root            Display format: "default json"
+2023-11-26 13:42:14,759 INFO     ___FILE_ONLY___ {
+  "configuration": {
+    "active_configuration": "default",
+    "properties": {
+      "auth": {
+        "impersonate_service_account": ""
+      },
+      "compute": {
+        "region": "europe-west1",
+        "zone": "europe-west1-d"
+      },
+      "core": {
+        "account": "timur.khamrakulov@yassir.com",
+        "disable_usage_reporting": "True",
+        "project": "ysr-ghrunner-prd"
+      }
+    }
+  },
+  "credential": {
+    "access_token": "ya29.a0AfB_byDi7nBzxjcp-04HB9Ez5gIUCFcGJHfFvfGtYMHTiXHcG63W8PROWYE8c6CoYIv6UDmCgA60Gn7XIjW6H5--b-Cjr7fU8_tgnm-Gn7HP_P12v8G4gqDkx-l72vpqLghvhvbRRiicVzKO2B7Q6fb42MXcPJMpS_AkBsYbmGgvaCgYKAc0SARASFQHGX2MiALX4N77blwrw9g1AO3e5UQ0179",
+    "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjBlNzJkYTFkZjUwMWNhNmY3NTZiZjEwM2ZkN2M3MjAyOTQ3NzI1MDYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIzMjU1NTk0MDU1OS5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsImF1ZCI6IjMyNTU1OTQwNTU5LmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwic3ViIjoiMTAxMTgwMDU4NjQ0OTY0OTA4Nzk0IiwiaGQiOiJ5YXNzaXIuY29tIiwiZW1haWwiOiJ0aW11ci5raGFtcmFrdWxvdkB5YXNzaXIuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJ3VE1mZlZUeDRkdXVQcFUwU3pZdkJRIiwiaWF0IjoxNzAxMDAyNTM0LCJleHAiOjE3MDEwMDYxMzR9.sk4Qaxo0WagbhnyUird5caJb3p1RZ_RpIL6MiJV8gSB11-oRcS7HEFtGfsX-kCo1LP57BEzfyp0kTN0fvgEYzrSEigzJ5IgeT2zNVFo4BBO0HBlOxUYPoyi_uMBFxYatKkZpZLxVb1qWTrEEji_hcvMpna00NCWrJSCZG9oUhOivZXjuJmfk-1Bauxe8LHflVW1wcsb7xk3ZdMKo1pGFWLG1Xry2gkNiUA1JvG-lb2rDK61Ojj0SJNSMfC4XVzoonvVDYnxjeaIAbKO-HFxdJWBjTNRtSfSkBUZYjzJhzhSYPaDlKJjO2k2qpGnZcxDuz8TvOnrgpbRPhwGRJnwH4Q",
+    "token_expiry": "2023-11-26T13:42:13Z"
+  },
+  "sentinels": {
+    "config_sentinel": "/home/timur/.config/gcloud/config_sentinel"
+  }
+}
+2023-11-26 13:42:14,759 INFO     ___FILE_ONLY___ 
+

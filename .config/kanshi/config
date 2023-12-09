@@ -1,0 +1,15 @@
+profile {
+  output eDP-1 enable mode 1920x1200 position 320,1440
+  output "Dell Inc. DELL S2722DC C8HVGD3" mode 2560x1440 position 0,0
+}
+
+profile {
+  output eDP-1 enable mode 1920x1200 position 0,1080
+  output "Dell Inc. DELL U2414H 9TG4649H4CVL" mode 1920x1080 position 0,0
+}
+
+profile {
+  output eDP-1 enable mode 1920x1200 position 3440,0
+  output "LG Electronics LG HDR WQHD 0x0000FDC3" mode 3440x1440 position 0,0
+}
+

@@ -1,0 +1,11 @@
+[core]
+account = timur.khamrakulov@yassir.com
+project = ysr-ghrunner-prd
+
+[compute]
+zone = europe-west1-d
+region = europe-west1
+
+[auth]
+impersonate_service_account = 
+

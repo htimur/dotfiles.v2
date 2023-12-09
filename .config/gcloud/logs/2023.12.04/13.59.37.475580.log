@@ -1,0 +1,12 @@
+2023-12-04 13:59:37,475 DEBUG    root            Loaded Command Group: ['gcloud', 'projects']
+2023-12-04 13:59:37,476 DEBUG    root            Loaded Command Group: ['gcloud', 'projects', 'describe']
+2023-12-04 13:59:37,477 DEBUG    root            Running [gcloud.projects.describe] with arguments: [--account: "timur.khamrakulov@yassir.com", --configuration: "default", --format: "value(name)", PROJECT_ID_OR_NUMBER: "ysr-ghrunner-prd"]
+2023-12-04 13:59:37,485 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudresourcemanager.googleapis.com:443
+2023-12-04 13:59:38,235 DEBUG    urllib3.connectionpool https://cloudresourcemanager.googleapis.com:443 "GET /v1/projects/ysr-ghrunner-prd?alt=json HTTP/1.1" 200 None
+2023-12-04 13:59:38,237 DEBUG    root            Chosen display Format:default value(name)
+2023-12-04 13:59:38,238 INFO     root            Display format: "default value(name)"
+2023-12-04 13:59:38,238 INFO     ___FILE_ONLY___ ysr-ghrunner-prd
+
+2023-12-04 13:59:38,247 DEBUG    root            Checking for updates...
+2023-12-04 13:59:38,249 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): dl.google.com:443
+2023-12-04 13:59:38,348 DEBUG    urllib3.connectionpool https://dl.google.com:443 "GET /dl/cloudsdk/channels/rapid/components-2.json HTTP/1.1" 200 209943

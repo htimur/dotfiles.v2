@@ -1,0 +1,12 @@
+2023-11-13 09:40:55,653 DEBUG    root            Loaded Command Group: ['gcloud', 'projects']
+2023-11-13 09:40:55,654 DEBUG    root            Loaded Command Group: ['gcloud', 'projects', 'describe']
+2023-11-13 09:40:55,655 DEBUG    root            Running [gcloud.projects.describe] with arguments: [--account: "timur.khamrakulov@yassir.com", --configuration: "default", --format: "value(name)", PROJECT_ID_OR_NUMBER: "ysr-ghrunner-prd"]
+2023-11-13 09:40:55,689 DEBUG    google.auth.transport.requests Making request: POST https://oauth2.googleapis.com/token
+2023-11-13 09:40:55,690 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2023-11-13 09:40:55,817 DEBUG    urllib3.connectionpool https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2023-11-13 09:40:55,841 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudresourcemanager.googleapis.com:443
+2023-11-13 09:40:56,570 DEBUG    urllib3.connectionpool https://cloudresourcemanager.googleapis.com:443 "GET /v1/projects/ysr-ghrunner-prd?alt=json HTTP/1.1" 200 None
+2023-11-13 09:40:56,572 DEBUG    root            Chosen display Format:default value(name)
+2023-11-13 09:40:56,572 INFO     root            Display format: "default value(name)"
+2023-11-13 09:40:56,572 INFO     ___FILE_ONLY___ ysr-ghrunner-prd
+

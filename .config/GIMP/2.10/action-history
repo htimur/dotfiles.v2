@@ -1,0 +1,12 @@
+# GIMP action-history
+
+(history-item "layers-new" 1)
+(history-item "file-export-as" 3)
+(history-item "file-save-as" 1)
+(history-item "tools-convolve" 0)
+(history-item "tools-paintbrush" 0)
+(history-item "layers-new-group" 0)
+(history-item "file-overwrite" 0)
+(history-item "file-quit" 1)
+
+# end of action-history
